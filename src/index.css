@@ -10,6 +10,7 @@ body {
 }
 
 a, a:link, a:visited, a:focus, a:active {
+  color: var(--primary-color);
   cursor: url(./asserts/cursor/hover.svg), pointer;
 }
 
