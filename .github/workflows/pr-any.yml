@@ -1,5 +1,5 @@
 name: PR
-on: [pull_request]
+on: [push]
 
 jobs:
     lint:
@@ -9,15 +9,15 @@ jobs:
             matrix:
                 node-version: [12.x]
         steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js ${{ matrix.node-version }}
-            - uses: actions/setup-node@v1
-              with:
-                node-version: ${{ matrix.node-version }}
-            - name: lint
-              run: |
-                yarn install --frozen-lockfile
-                yarn lint
+        - uses: actions/checkout@v1
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}
+        - name: lint
+          run: |
+            yarn install --frozen-lockfile
+            yarn lint
     
     build:
         name: build
@@ -26,12 +26,12 @@ jobs:
             matrix:
                 node-version: [12.x]
         steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js ${{ matrix.node-version }}
-            - uses: actions/setup-node@v1
-              with:
-                node-version: ${{ matrix.node-version }}
-            - name: lint
-              run: |
-                yarn install --forzen-lockfile
-                yarn run build
+        - uses: actions/checkout@v1
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}
+        - name: lint
+          run: |
+            yarn install --forzen-lockfile
+            yarn run build

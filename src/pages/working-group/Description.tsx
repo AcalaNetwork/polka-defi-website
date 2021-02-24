@@ -21,6 +21,8 @@ const Content = styled.div`
   margin-top: 32px;
 `;
 
+const PRLink = styled.a``;
+
 const Description: FC = () => (
   <DescriptionRoot>
     <Text>How to get on the list:</Text>
@@ -28,7 +30,11 @@ const Description: FC = () => (
       <Text>1) Build a chain or Dapp in Polkadot ecosystem</Text>
       <Text>2) Be about finance </Text>
       <Text>3) Have code</Text>
-      <Text>4) Submit a PR Here</Text>
+      <Text>
+        4) Submit a
+        {' '}
+        <PRLink href="https://github.com/AcalaNetwork/polka-defi-website" target="_blank">PR Here</PRLink>
+      </Text>
     </Content>
   </DescriptionRoot>
 );

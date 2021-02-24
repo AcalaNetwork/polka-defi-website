@@ -40,6 +40,7 @@ const Header: FC = () => (
       <SubTitle>A working group to map DeFi on PolkaDot</SubTitle>
       <Discussion>
         Discussion happening on
+        {' '}
         <Link href="https://discord.gg/agzWA2DP8U" target="_blank">
           Discord
         </Link>
