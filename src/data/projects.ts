@@ -3,7 +3,7 @@ import acala from '../asserts/projects/acala.svg';
 
 export default [
   {
-    name: 'Acala',
+    name: 'SampleA',
     logo: acala,
     tvl: 100000000,
     demo: 'https://apps.acala.network/',
